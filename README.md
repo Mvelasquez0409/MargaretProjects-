@@ -1,9 +1,9 @@
 # Margaret Velasquez Portfolio ♡
 
-Welcome to my Data Analyst portfolio, a place where I invite you to explore a world of data-driven insights and projects, all curated with a feminine touch. Here, I'll take you through a selection of endeavors that highlight my prowess in harnessing the power of Python, SQL, Tableau, and Power BI to transform raw data into actionable knowledge. As a data enthusiast, my forte lies in gathering, cleaning, analyzing, and visualizing data, all while adding a touch of elegance.
+Welcome to my Data Analyst portfolio, a place where I invite you to explore a world of data-driven insights and projects. Here, I'll take you through a selection of endeavors that highlight my prowess in harnessing the power of Python, SQL, Tableau, and Power BI to transform raw data into actionable knowledge. As a data enthusiast, my forte lies in gathering, cleaning, analyzing, and visualizing data, all while adding a touch of elegance.
 
 About Me:
-I am a passionate and results-driven Data Analyst with a flair for blending the art and science of data. My keen eye for detail and an innate curiosity make me adept at translating complex data sets into captivating insights. Below, you'll discover a collection of projects that showcase my skills and creativity in the field of data analytics, with a feminine sensibility.
+I am a passionate and results-driven Data Analyst with a flair for blending the art and science of data. My keen eye for detail and an innate curiosity make me adept at translating complex data sets into captivating insights. Below, you'll discover a collection of projects that showcase my skills and creativity in the field of data analytics.
 
 Project Highlights:
  
