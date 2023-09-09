@@ -1,5 +1,4 @@
 # Margaret Velasquez Portfolio ♡
-Projects developed in Jupiter Notebook using python
 
 Welcome to my Data Analyst portfolio, a place where I invite you to explore a world of data-driven insights and projects, all curated with a feminine touch. Here, I'll take you through a selection of endeavors that highlight my prowess in harnessing the power of Python, SQL, Tableau, and Power BI to transform raw data into actionable knowledge. As a data enthusiast, my forte lies in gathering, cleaning, analyzing, and visualizing data, all while adding a touch of elegance.
 
