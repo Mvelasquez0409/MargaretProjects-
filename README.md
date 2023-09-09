@@ -1,3 +1,3 @@
-# Stock-Prediction
-J.P. Stock Prediction (2022-2025)
+# Margaret Velasquez Portfolio ♡
+Projects developed in Jupiter Notebook using python
 
