@@ -1,0 +1,13 @@
+--ROLLUP AND CUBE 
+SELECT
+    Region,
+    ProductCategory,
+    SUM(SalesAmount) AS TotalSales
+
+FROM vmOrderAll
+
+WHERE YEAR(OrderDate) = 2013
+AND Currency = N'US Dollars'
+
+--GROUP BY CUBE(Region,ProductCategory)
+GROUP BY ROLLUP(Region,ProductCategory)
