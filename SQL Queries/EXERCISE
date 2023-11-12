@@ -1,0 +1,75 @@
+--EXERCISE 5B
+SELECT
+    a.AccountDescription,
+    SUM(f.Amount) AS Amount,
+    SUM(f.Amount)/(SELECT
+            
+                        SUM(f.Amount) AS Amount
+
+                    FROM FactFinance AS f
+                        INNER JOIN DimAccount AS a
+                        ON f.AccountKey = a.AccountKey
+                        INNER JOIN DimScenario AS s
+                        ON f.ScenarioKey = s.ScenarioKey
+                        INNER JOIN DimOrganization AS o
+                        ON f.OrganizationKey = o.OrganizationKey
+                        INNER JOIN DimDate AS d
+                        ON f.DateKey= d.DateKey
+
+
+                    WHERE s.ScenarioName = N'Actual'
+                        AND o.OrganizationName = N'Canadian Division'
+                        AND d.CalendarYear = 2013
+                        AND a.AccountType = N'Expenditures') AS PctOfTotal
+
+
+
+FROM FactFinance AS f
+    INNER JOIN DimAccount AS a
+    ON f.AccountKey = a.AccountKey
+    INNER JOIN DimScenario AS s
+    ON f.ScenarioKey = s.ScenarioKey
+    INNER JOIN DimOrganization AS o
+    ON f.OrganizationKey = o.OrganizationKey
+    INNER JOIN DimDate AS d
+    ON f.DateKey= d.DateKey
+
+
+WHERE s.ScenarioName = N'Actual'
+    AND o.OrganizationName = N'Canadian Division'
+    AND d.CalendarYear = 2013
+    AND a.AccountType = N'Expenditures'
+
+GROUP BY a.AccountDescription
+
+ORDER BY Amount DESC
+
+EXERCISE 5A
+SELECT
+    o.OrganizationName AS Organization,
+    a.AccountType AS AccountType,
+    a.AccountDescription AS Account,
+    SUM(ff.Amount) AS Amt
+
+FROM FactFinance AS ff
+    INNER JOIN DimScenario AS s
+    ON ff.ScenarioKey= s.ScenarioKey
+    INNER JOIN DimDate AS d
+    ON ff.DateKey =d.DateKey
+    INNER JOIN DimOrganization AS o
+    ON ff.OrganizationKey = o.OrganizationKey
+    INNER JOIN DimAccount AS a
+    ON ff.AccountKey= a.AccountKey
+
+WHERE s.ScenarioName = N'Actual'
+    AND d.CalendarYear = 2011
+    AND d.EnglishMonthName = N'January'
+    AND o.OrganizationName = N'Southwest Division'
+    AND a.AccountType  = N'Expenditures'
+
+GROUP BY o.OrganizationName, a.AccountType, a.AccountDescription
+ORDER BY Amt DESC
+
+
+
+
