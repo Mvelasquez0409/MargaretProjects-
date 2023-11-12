@@ -1,0 +1,20 @@
+-- retrieves sales data from the FactInternetSales table, groups it by SalesOrderNumber and OrderDate, 
+--applies a filter to include only groups with a sum of SalesAmount greater than 1000, orders the result by InvoiceSubTotal, 
+--skips the first 2 rows, and fetches the next 10 rows. This can b
+SELECT 
+SalesOrderNumber AS InvoiceNumber,
+OrderDate,
+SUM(SalesAmount) AS InvoiceSubTotal,
+SUM(TaxAmt) AS TaxAmount,
+SUM(OrderQuantity) AS TotalQuantity,
+SUM(SalesAmount) + SUM(TaxAmt) AS InvoiceTotal
+FROM FactInternetSales
+WHERE SalesTerritoryKey = 6
+
+
+Group BY SalesOrderNumber, OrderDate
+HAVING SUM(SalesAmount) > 1000
+
+ORDER BY InvoiceSubTotal DESC
+
+OFFSET 2 ROWS FETCH NEXT 10 ROWS ONLY
