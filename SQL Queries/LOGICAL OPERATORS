@@ -1,5 +1,3 @@
--- CFI SQL Fundamentals Logical Operators examples of common errors. Ensure you use the parenthesis to protect against unintentional errors.
-
 SELECT
 
 EnglishProductName,
